@@ -162,8 +162,8 @@
           </p>
         </div>
 
-        <!-- Outlook Activities Calendar embed -->
-        <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 24px var(--shadow-md); border: 1px solid var(--border); position: relative;">
+        <!-- Outlook Activities Calendar embed — desktop only -->
+        <div class="calendar-desktop-embed" style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 24px var(--shadow-md); border: 1px solid var(--border); position: relative;">
           <div style="overflow: hidden; height: 640px;">
             <iframe
               src="https://outlook.office365.com/owa/calendar/5b835fa6b5344c64ab4eb6797c6a95d7@desertsun.ca/7c5f2800f64f460db3e0514ab6c4880311680820576268180698/calendar.html"
@@ -174,6 +174,21 @@
               loading="lazy">
             </iframe>
           </div>
+        </div>
+
+        <!-- Mobile calendar fallback — button to open in browser -->
+        <div class="calendar-mobile-fallback" style="text-align: center; padding: 40px 24px; background: #fff; border-radius: var(--radius-lg); box-shadow: 0 4px 24px var(--shadow-md); border: 1px solid var(--border);">
+          <div style="font-size: 2.5rem; margin-bottom: 16px;">📅</div>
+          <h3 style="font-family: var(--font-heading); color: var(--navy); font-size: 1.3rem; margin-bottom: 10px;">View Our Activities Calendar</h3>
+          <p style="color: var(--text-mid); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6;">
+            See all upcoming programs, activities, and community events across Oliver, Osoyoos, and Okanagan Falls.
+          </p>
+          <a href="https://outlook.office365.com/owa/calendar/5b835fa6b5344c64ab4eb6797c6a95d7@desertsun.ca/7c5f2800f64f460db3e0514ab6c4880311680820576268180698/calendar.html"
+             target="_blank" rel="noopener"
+             class="btn btn--primary"
+             style="display: inline-block; padding: 14px 32px; font-size: 1rem;">
+            Open Calendar &rarr;
+          </a>
         </div>
 
         <p style="margin-top: 16px; font-size: 0.88rem; color: var(--text-light); text-align: center;">
