@@ -2223,3 +2223,67 @@ p {
   .form-group--half { grid-template-columns: 1fr; }
   .contact-form { padding: 20px; }
 }
+
+/* ================================================================
+   MOBILE POLISH
+   ================================================================ */
+
+/* Navbar — hide Get Help button on small phones to reduce clutter */
+@media (max-width: 520px) {
+  .navbar__actions .btn--outline-navy {
+    display: none;
+  }
+  .navbar__donate {
+    padding: 8px 16px;
+    font-size: 0.84rem;
+  }
+  .navbar__inner {
+    padding: 0 16px;
+  }
+}
+
+/* Calendar — make horizontally scrollable on mobile */
+@media (max-width: 700px) {
+  .calendar-mobile-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px var(--shadow-md);
+    border: 1px solid var(--border);
+  }
+  .calendar-mobile-wrap > div {
+    min-width: 620px;
+    height: 480px;
+  }
+  .calendar-mobile-wrap > div iframe {
+    height: 540px;
+  }
+}
+
+/* Jobs page — two-column grids collapse on mobile */
+@media (max-width: 600px) {
+  .job-two-col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Seniors — TAPS activities grid collapses on mobile */
+@media (max-width: 600px) {
+  .taps-activities-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Programs detail cards — ensure single column on small phones */
+@media (max-width: 500px) {
+  .programs-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* General — reduce section padding on small phones */
+@media (max-width: 500px) {
+  .section { padding: 40px 0; }
+  .container { padding: 0 16px; }
+  .hero__title { font-size: clamp(2rem, 10vw, 3.5rem); }
+}
