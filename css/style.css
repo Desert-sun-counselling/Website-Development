@@ -2242,22 +2242,12 @@ p {
   }
 }
 
-/* Calendar — make horizontally scrollable on mobile */
+/* Calendar — show iframe on desktop, button on mobile */
+.calendar-mobile-fallback { display: none; }
+
 @media (max-width: 700px) {
-  .calendar-mobile-wrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 4px 24px var(--shadow-md);
-    border: 1px solid var(--border);
-  }
-  .calendar-mobile-wrap > div {
-    min-width: 620px;
-    height: 480px;
-  }
-  .calendar-mobile-wrap > div iframe {
-    height: 540px;
-  }
+  .calendar-desktop-embed { display: none; }
+  .calendar-mobile-fallback { display: block; }
 }
 
 /* Jobs page — two-column grids collapse on mobile */
