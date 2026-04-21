@@ -1426,6 +1426,17 @@ p {
   display: block;
 }
 
+/* Portrait variant for counsellor headshots — preserves more of the photo */
+.feature-block__image--portrait img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
 .feature-block__content {}
 
 .feature-block__content h3 {
