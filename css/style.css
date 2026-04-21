@@ -1437,6 +1437,15 @@ p {
   display: block;
 }
 
+/* Natural variant — shows the entire image at its own aspect ratio, no cropping */
+.feature-block__image--natural img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  display: block;
+}
+
 .feature-block__content {}
 
 .feature-block__content h3 {
