@@ -139,7 +139,7 @@
          ---------------------------------------------------------- -->
     <section class="event-feature" aria-labelledby="event-heading">
       <div class="container">
-        <div class="event-feature__grid event-feature__grid--with-raffle">
+        <div class="event-feature__grid">
 
           <a class="event-feature__poster"
              href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
@@ -183,7 +183,10 @@
                  2. Delete the <p class="raffle-card__placeholder"> line
                  3. Add the BC Gaming licence number in the licence line
                ---------------------------------------------------------- -->
-          <aside class="raffle-card" aria-labelledby="raffle-heading">
+          <!-- HIDDEN until the Raffle Nexus embed code is ready. To show it:
+                 remove the word "hidden" from the <aside> line below, AND add
+                 " event-feature__grid--with-raffle" back to the event-feature__grid div above. -->
+          <aside class="raffle-card" aria-labelledby="raffle-heading" hidden>
             <span class="section-label">Online 50/50 &amp; Raffle</span>
             <h3 class="raffle-card__title" id="raffle-heading">Try your luck for a great cause</h3>
             <p class="raffle-card__desc">
