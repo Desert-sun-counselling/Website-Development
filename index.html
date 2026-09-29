@@ -131,6 +131,54 @@
     </section>
 
     <!-- ----------------------------------------------------------
+         FEATURED EVENT - EMPTY BOWLS (Eventbrite ticket sales)
+         To remove after the event: delete this section and the
+         Eventbrite scripts near the bottom of this file.
+         ---------------------------------------------------------- -->
+    <section class="event-feature" aria-labelledby="event-heading">
+      <div class="container">
+        <div class="event-feature__grid">
+
+          <a class="event-feature__poster"
+             href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
+             target="_blank" rel="noopener noreferrer">
+            <img src="images/empty-bowls-poster.jpg" width="900" height="1379" loading="eager"
+                 alt="Empty Bowls Kick-Off Fundraising Event poster: November 14th, 6-9pm, doors 5:30, at Spirit Ridge Resort. $75 per person." />
+          </a>
+
+          <div class="event-feature__content">
+            <span class="section-label">Upcoming Fundraiser</span>
+            <h2 class="event-feature__title" id="event-heading">Empty Bowls Kick-Off Fundraising Event</h2>
+            <p class="event-feature__desc">
+              Local chefs compete for the title of <strong>Best Soup</strong> in an evening of
+              door prizes, a silent auction and entertainment. Every ticket supports free
+              counselling and support programs in Oliver and Osoyoos.
+            </p>
+
+            <ul class="event-feature__details">
+              <li><span class="event-feature__key">When</span> Saturday, November 14 &middot; 6&ndash;9 pm (doors 5:30)</li>
+              <li><span class="event-feature__key">Where</span> Spirit Ridge Resort, Osoyoos</li>
+              <li><span class="event-feature__key">Tickets</span> $75 per person</li>
+              <li><span class="event-feature__key">Getting there</span> Free shuttle service available</li>
+            </ul>
+
+            <div class="event-feature__actions">
+              <button id="eventbrite-widget-modal-trigger-2002590653553" type="button" class="btn btn--primary btn--large">
+                Buy Tickets &ndash; $75
+              </button>
+              <noscript>
+                <a href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
+                   class="btn btn--primary btn--large" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
+              </noscript>
+            </div>
+            <p class="event-feature__note">Tickets are also available at our Oliver and Osoyoos offices.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------
          STATS STRIP
          ---------------------------------------------------------- -->
     <section class="stats-strip" aria-label="Organization highlights">
@@ -563,6 +611,29 @@
         nav.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', false);
       });
+    });
+  </script>
+
+  <!-- ============================================================
+       EVENTBRITE - Empty Bowls ticket checkout (pop-up)
+       ============================================================ -->
+  <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+  <script>
+    window.EBWidgets.createWidget({
+      widgetType: 'checkout',
+      eventId: '2002590653553',
+      themeSettings: {
+        brandColor: '#D4820A',
+        fontColor: '#1B3A5C',
+        background: '#FDF8F3'
+      },
+      modal: true,
+      modalTriggerElementId: 'eventbrite-widget-modal-trigger-2002590653553',
+      onOrderComplete: function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'purchase_eventbrite', { event_id: '2002590653553' });
+        }
+      }
     });
   </script>
 
