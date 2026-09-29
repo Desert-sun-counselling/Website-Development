@@ -2389,3 +2389,95 @@ p {
   .event-feature { padding: 40px 0; }
   .event-feature__actions .btn { width: 100%; white-space: normal; }
 }
+
+
+/* Online 50/50 & raffle card (sits beside the Empty Bowls event) */
+.event-feature__grid--with-raffle {
+  grid-template-columns: minmax(220px, 300px) 1fr minmax(260px, 320px);
+  gap: 40px;
+}
+.raffle-card {
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 20px rgba(18, 40, 67, 0.08);
+  align-self: center;
+}
+.raffle-card__title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.raffle-card__desc {
+  color: var(--text-mid);
+  font-size: 0.98rem;
+  margin: 0 0 18px;
+}
+.raffle-card__embed {
+  min-height: 160px;
+  border-radius: 10px;
+  background: var(--warm-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.raffle-card__embed iframe { width: 100%; border: 0; }
+.raffle-card__placeholder {
+  margin: 0;
+  padding: 20px;
+  border: 2px dashed var(--gold-light);
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--navy);
+}
+.raffle-card__licence {
+  margin: 12px 0 0;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.raffle-card__licence:empty { display: none; }
+@media (max-width: 1060px) {
+  .event-feature__grid--with-raffle { grid-template-columns: minmax(220px, 300px) 1fr; }
+  .event-feature__grid--with-raffle .raffle-card { grid-column: 1 / -1; max-width: 640px; width: 100%; justify-self: center; }
+}
+@media (max-width: 900px) {
+  .event-feature__grid--with-raffle { grid-template-columns: 1fr; }
+  .raffle-card { text-align: center; }
+}
+
+
+/* ============================================================
+   TEMPORARY: compact hero while the Empty Bowls event is featured.
+   Remove the "hero--compact" class from index.html to restore.
+   ============================================================ */
+.hero--compact { min-height: 400px; }
+.hero--compact .hero__content { padding: 40px 0; max-width: 780px; }
+.hero--compact .hero__title br { display: none; }
+.hero--compact .hero__title {
+  font-size: clamp(2rem, 4.2vw, 2.8rem);
+  margin-bottom: 14px;
+}
+.hero--compact .hero__desc { margin-bottom: 24px; }
+@media (max-width: 600px) {
+  .hero--compact { min-height: 0; }
+  .hero--compact .hero__content { padding: 36px 0; }
+  .hero--compact .hero__desc { font-size: 1rem; line-height: 1.6; }
+  .hero--compact .hero__title { font-size: clamp(1.7rem, 7.5vw, 2.2rem); }
+  .hero--compact .hero__actions { gap: 10px; flex-direction: row; flex-wrap: wrap; }
+  .hero--compact .hero__actions .btn--large { padding: 10px 18px; font-size: 0.88rem; }
+}
+
+
+/* Programs page: while the Activities Calendar card is removed (7 cards),
+   let the final "Not Sure Where to Start?" card span the full row. */
+@media (min-width: 601px) {
+  .category-nav > .category-nav-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
