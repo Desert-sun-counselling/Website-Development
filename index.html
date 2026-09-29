@@ -95,7 +95,9 @@
     <!-- ----------------------------------------------------------
          HERO SECTION
          ---------------------------------------------------------- -->
-    <section class="hero" aria-label="Welcome to Desert Sun Counselling">
+    <!-- TEMPORARY (Empty Bowls): "hero--compact" makes this banner shorter so the event shows above the fold.
+         After the event, remove "hero--compact" below to restore the full-height banner. -->
+    <section class="hero hero--compact" aria-label="Welcome to Desert Sun Counselling">
 
       <div class="hero__bg" role="img" aria-label="Community members supporting each other">
         <!--
@@ -137,7 +139,7 @@
          ---------------------------------------------------------- -->
     <section class="event-feature" aria-labelledby="event-heading">
       <div class="container">
-        <div class="event-feature__grid">
+        <div class="event-feature__grid event-feature__grid--with-raffle">
 
           <a class="event-feature__poster"
              href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
@@ -173,6 +175,30 @@
             </div>
             <p class="event-feature__note">Tickets are also available at our Oliver and Osoyoos offices.</p>
           </div>
+
+          <!-- ----------------------------------------------------------
+               ONLINE 50/50 & RAFFLE (Raffle Nexus) - RESERVED BLOCK
+               When the Raffle Nexus embed code is ready:
+                 1. Paste it inside <div id="rafflenexus-embed"> below
+                 2. Delete the <p class="raffle-card__placeholder"> line
+                 3. Add the BC Gaming licence number in the licence line
+               ---------------------------------------------------------- -->
+          <aside class="raffle-card" aria-labelledby="raffle-heading">
+            <span class="section-label">Online 50/50 &amp; Raffle</span>
+            <h3 class="raffle-card__title" id="raffle-heading">Try your luck for a great cause</h3>
+            <p class="raffle-card__desc">
+              Support Desert Sun with our online 50/50 draw and raffle.
+            </p>
+
+            <div id="rafflenexus-embed" class="raffle-card__embed">
+              <!-- PASTE RAFFLE NEXUS EMBED CODE HERE -->
+              <p class="raffle-card__placeholder">Online tickets coming soon.</p>
+            </div>
+
+            <p class="raffle-card__licence">
+              <!-- BC Gaming Event Licence #: ADD NUMBER HERE -->
+            </p>
+          </aside>
 
         </div>
       </div>
