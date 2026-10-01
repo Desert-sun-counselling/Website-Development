@@ -7,6 +7,86 @@
   <meta name="description" content="The page you were looking for could not be found. Return to the Desert Sun Counselling website." />
   <meta name="robots" content="noindex" />
 
+  <!-- ============================================================
+       OLD-SITE REDIRECTS (GitHub Pages ignores .htaccess)
+       Old WordPress links like /index.php/womens-crisis-line land on
+       this 404 page; this script forwards them to the new page.
+       To add one: "old-slug": "new-page.html"
+       ============================================================ -->
+  <script>
+    (function () {
+      // Site root: "/" on the custom domain, "/<repo>/" on *.github.io
+      var root = "/";
+      if (/\.github\.io$/i.test(location.hostname)) {
+        var seg = location.pathname.split("/")[1];
+        if (seg) root = "/" + seg + "/";
+      }
+      // Make this page's own CSS/images/links work at any depth
+      document.write('<base href="' + root + '">');
+
+      var map = {
+        "": "",
+        "welcome": "about.html",
+        "our-history": "about.html",
+        "our-team": "about.html",
+        "board-of-directors": "about.html",
+        "media": "about.html",
+        "what-we-do": "programs.html",
+        "community-connector-program": "programs.html",
+        "community-kitchen": "programs.html",
+        "ds-cooks": "programs.html",
+        "community-lift-program": "programs.html",
+        "community-support-worker": "programs.html",
+        "computer-tutor": "programs.html",
+        "tablet-lending-library": "programs.html",
+        "affordable-housing": "programs.html",
+        "canada-bc-housing-benefit": "programs.html",
+        "fields-to-futures": "programs.html",
+        "share-the-spirit": "programs.html",
+        "counselling": "counselling.html",
+        "womens-counselling": "counselling.html",
+        "mens-counselling": "counselling.html",
+        "child-youth-counselling": "counselling.html",
+        "fee-for-service-counselling": "fee-for-service.html",
+        "peace-program": "counselling.html",
+        "parenting-skills-okanagan-correctional-centre": "counselling.html",
+        "womens-crisis-line": "crisis.html",
+        "crisis": "crisis.html",
+        "safe-home": "crisis.html",
+        "cindy-taylor-safe-home": "crisis.html",
+        "youth-shelter": "crisis.html",
+        "better-at-home": "seniors.html",
+        "better-at-home-independent-seniors": "seniors.html",
+        "therapeutic-activation-programs-for-seniors": "seniors.html",
+        "taps": "seniors.html",
+        "social-meals-program": "seniors.html",
+        "mens-shed": "seniors.html",
+        "parenting": "parenting.html",
+        "circle-of-security": "parenting.html",
+        "mother-goose-program": "parenting.html",
+        "roots-of-empathy": "parenting.html",
+        "nobodys-perfect": "parenting.html",
+        "get-help-now": "get-help.html",
+        "get-help": "get-help.html",
+        "get-involved": "get-involved.html",
+        "volunteer-opportunities": "get-involved.html",
+        "donate": "get-involved.html",
+        "planned-giving": "get-involved.html",
+        "annual-report": "impact.html",
+        "our-funders-partners": "impact.html",
+        "job-opportunities": "jobs.html",
+        "contact": "contact.html"
+      };
+
+      var path = decodeURIComponent(location.pathname).toLowerCase();
+      if (root !== "/" && path.indexOf(root.toLowerCase()) === 0) path = "/" + path.slice(root.length);
+      path = path.replace(/^\/index\.php/, "").replace(/^\/+|\/+$/g, "");
+      if (path.slice(-5) === ".html") return;   // a new-site page that truly doesn't exist
+      var target = map.hasOwnProperty(path) ? map[path] : null;
+      if (target !== null) location.replace(root + target + location.hash);
+    })();
+  </script>
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/favicon.png" />
 
