@@ -143,7 +143,7 @@
          ---------------------------------------------------------- -->
     <section class="event-feature" aria-labelledby="event-heading">
       <div class="container">
-        <div class="event-feature__grid">
+        <div class="event-feature__grid event-feature__grid--with-raffle">
 
           <a class="event-feature__poster"
              href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
@@ -181,29 +181,36 @@
           </div>
 
           <!-- ----------------------------------------------------------
-               ONLINE 50/50 & RAFFLE (Raffle Nexus) - RESERVED BLOCK
-               When the Raffle Nexus embed code is ready:
-                 1. Paste it inside <div id="rafflenexus-embed"> below
-                 2. Delete the <p class="raffle-card__placeholder"> line
-                 3. Add the BC Gaming licence number in the licence line
+               ONLINE 50/50 (Raffle Nexus)
+               Tickets are sold on desertsun.rafflenexus.com - this card links there.
+               To remove after the draw: delete this <aside> and remove
+               " event-feature__grid--with-raffle" from the grid div above.
                ---------------------------------------------------------- -->
-          <!-- HIDDEN until the Raffle Nexus embed code is ready. To show it:
-                 remove the word "hidden" from the <aside> line below, AND add
-                 " event-feature__grid--with-raffle" back to the event-feature__grid div above. -->
-          <aside class="raffle-card" aria-labelledby="raffle-heading" hidden>
-            <span class="section-label">Online 50/50 &amp; Raffle</span>
-            <h3 class="raffle-card__title" id="raffle-heading">Try your luck for a great cause</h3>
+          <aside class="raffle-card" aria-labelledby="raffle-heading">
+            <span class="section-label">Online 50/50 Draw</span>
+            <h3 class="raffle-card__title" id="raffle-heading">Play our 50/50 online</h3>
             <p class="raffle-card__desc">
-              Support Desert Sun with our online 50/50 draw and raffle.
+              Half the jackpot goes to one lucky winner, and half supports free
+              counselling and support programs in Oliver and Osoyoos.
             </p>
 
-            <div id="rafflenexus-embed" class="raffle-card__embed">
-              <!-- PASTE RAFFLE NEXUS EMBED CODE HERE -->
-              <p class="raffle-card__placeholder">Online tickets coming soon.</p>
-            </div>
+            <ul class="raffle-card__prices">
+              <li><span>1 ticket</span> <strong>$5</strong></li>
+              <li><span>5 tickets</span> <strong>$20</strong></li>
+              <li><span>20 tickets</span> <strong>$50</strong></li>
+            </ul>
+
+            <p class="raffle-card__draw">
+              Winner drawn live at the Empty Bowls Kick-Off on Saturday, November 14 at 9:00 pm.
+              Online sales close at 8:30 pm that night.
+            </p>
+
+            <a href="https://desertsun.rafflenexus.com/" class="btn btn--primary btn--large raffle-card__btn"
+               target="_blank" rel="noopener noreferrer">Buy 50/50 Tickets</a>
 
             <p class="raffle-card__licence">
-              <!-- BC Gaming Event Licence #: ADD NUMBER HERE -->
+              BC Gaming Event Licence #177224. Must be 19+ and located in BC to play.
+              Know your limit, play within it. Problem Gambling Help Line <span style="white-space: nowrap;">1-888-795-6111</span>.
             </p>
           </aside>
 
