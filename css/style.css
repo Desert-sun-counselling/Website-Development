@@ -2361,10 +2361,13 @@ p {
 .event-feature__details li {
   color: var(--text);
   font-size: 1rem;
+  display: grid;
+  grid-template-columns: 124px 1fr;   /* label column + value column, so values line up */
+  align-items: baseline;
 }
 .event-feature__key {
   display: inline-block;
-  min-width: 118px;
+  min-width: 0;
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 0.78rem;
@@ -2383,6 +2386,7 @@ p {
   .event-feature__content { text-align: center; }
   .event-feature__desc { margin-left: auto; margin-right: auto; }
   .event-feature__details { justify-items: center; }
+  .event-feature__details li { display: block; }
   .event-feature__key { min-width: 0; margin-right: 6px; }
 }
 @media (max-width: 500px) {
@@ -2501,3 +2505,101 @@ p {
 @media (min-width: 601px) {
   .category-nav > .category-nav-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
+
+
+/* ----------------------------------------------------------------
+   SEASONAL - SHARE THE SPIRIT banner (home page)
+   Remove this block after Christmas along with the HTML section.
+   ---------------------------------------------------------------- */
+.sts-banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+  padding: 48px 0;
+  border-bottom: 4px solid var(--gold);
+}
+.sts-banner::before {          /* soft falling-snow dots */
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.18) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(240,160,48,.22) 1px, transparent 1.5px);
+  background-size: 46px 46px, 29px 29px;
+  background-position: 0 0, 14px 20px;
+  pointer-events: none;
+}
+.sts-banner .container { position: relative; }
+.sts-banner__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.sts-banner__label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+.sts-banner__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 14px;
+}
+.sts-banner__desc {
+  color: rgba(255,255,255,.88);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0 0 24px;
+  max-width: 58ch;
+}
+.sts-banner__desc strong { color: #fff; }
+.sts-banner__contacts {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.sts-banner__contacts-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: #fff;
+}
+.sts-contact {
+  display: grid;
+  gap: 2px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+.sts-contact__town {
+  font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold-light);
+}
+.sts-contact__name { font-weight: 600; color: #fff; }
+.sts-contact__email {
+  color: rgba(255,255,255,.85);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+.sts-contact__email:hover { color: var(--gold-light); }
+.sts-banner__together {
+  margin: 12px 0 0;
+  font-style: italic;
+  font-size: .92rem;
+  color: rgba(255,255,255,.75);
+}
+@media (max-width: 860px) {
+  .sts-banner { padding: 36px 0; }
+  .sts-banner__grid { grid-template-columns: 1fr; gap: 28px; }
+  .sts-banner .btn { width: 100%; }
+}
+.sts-contact__org { font-weight: 400; color: rgba(255,255,255,.75); }
