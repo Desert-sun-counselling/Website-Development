@@ -2603,3 +2603,66 @@ p {
   .sts-banner .btn { width: 100%; }
 }
 .sts-contact__org { font-weight: 400; color: rgba(255,255,255,.75); }
+
+/* ----------------------------------------------------------------
+   ANNOUNCEMENT - 50/50 DRAW WINNER (temporary, index.html)
+   ---------------------------------------------------------------- */
+.winner-notice {
+  background: var(--gold-pale);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--cream);
+  padding: 36px 0 24px;
+}
+.winner-notice__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.winner-notice__text { flex: 1 1 420px; }
+.winner-notice__title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+.winner-notice__desc { color: var(--text-mid); margin: 0; max-width: 620px; }
+.winner-notice__ticket {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+}
+.winner-notice__ticket div {
+  background: #fff;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 12px 22px;
+  text-align: center;
+}
+.winner-notice__ticket dt {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.winner-notice__ticket dd {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin: 2px 0 0;
+}
+.winner-notice__licence {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  margin: 16px 0 0;
+}
+@media (max-width: 600px) {
+  .winner-notice__ticket { width: 100%; }
+  .winner-notice__ticket div { flex: 1; padding: 10px 12px; }
+  .winner-notice__ticket dd { font-size: 1.25rem; }
+}
