@@ -99,9 +99,7 @@
     <!-- ----------------------------------------------------------
          HERO SECTION
          ---------------------------------------------------------- -->
-    <!-- TEMPORARY (Empty Bowls): "hero--compact" makes this banner shorter so the event shows above the fold.
-         After the event, remove "hero--compact" below to restore the full-height banner. -->
-    <section class="hero hero--compact" aria-label="Welcome to Desert Sun Counselling">
+    <section class="hero" aria-label="Welcome to Desert Sun Counselling">
 
       <div class="hero__bg" role="img" aria-label="Community members supporting each other">
         <!--
@@ -177,84 +175,27 @@
 
 
     <!-- ----------------------------------------------------------
-         FEATURED EVENT - EMPTY BOWLS (Eventbrite ticket sales)
-         To remove after the event: delete this section and the
-         Eventbrite scripts near the bottom of this file.
+         ANNOUNCEMENT - 50/50 DRAW WINNER (Empty Bowls Kick-Off, Nov 14 2026)
+         To remove: delete this whole <section>.
          ---------------------------------------------------------- -->
-    <section class="event-feature" aria-labelledby="event-heading">
+    <section class="winner-notice" aria-labelledby="winner-heading">
       <div class="container">
-        <div class="event-feature__grid event-feature__grid--with-raffle">
-
-          <a class="event-feature__poster"
-             href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
-             target="_blank" rel="noopener noreferrer">
-            <img src="images/empty-bowls-poster.jpg" width="900" height="1379" loading="eager"
-                 alt="Empty Bowls Kick-Off Fundraising Event poster: November 14th, 6-9pm, doors 5:30, at Spirit Ridge Resort. $75 per person." />
-          </a>
-
-          <div class="event-feature__content">
-            <span class="section-label">Upcoming Fundraiser</span>
-            <h2 class="event-feature__title" id="event-heading">Empty Bowls Kick-Off Fundraising Event</h2>
-            <p class="event-feature__desc">
-              Local chefs compete for the title of <strong>Best Soup</strong> in an evening of
-              door prizes, a silent auction and entertainment. Every ticket supports free
-              counselling and support programs in Oliver and Osoyoos.
+        <div class="winner-notice__inner">
+          <div class="winner-notice__text">
+            <span class="section-label">Online 50/50 Draw Results</span>
+            <h2 class="winner-notice__title" id="winner-heading">Congratulations to our 50/50 winner!</h2>
+            <p class="winner-notice__desc">
+              The winning ticket was drawn live at the Empty Bowls Kick-Off on November 14.
+              Thank you to everyone who bought tickets and joined us at Spirit Ridge &ndash;
+              your support helps fund free programs in Oliver and Osoyoos.
             </p>
-
-            <ul class="event-feature__details">
-              <li><span class="event-feature__key">When</span> <span>Sat, Nov 14 &middot; 6&ndash;9 pm (doors 5:30)</span></li>
-              <li><span class="event-feature__key">Where</span> Spirit Ridge Resort, Osoyoos</li>
-              <li><span class="event-feature__key">Tickets</span> $75 per person</li>
-              <li><span class="event-feature__key">Getting there</span> Free shuttle service available</li>
-            </ul>
-
-            <div class="event-feature__actions">
-              <button id="eventbrite-widget-modal-trigger-2002590653553" type="button" class="btn btn--primary btn--large">
-                Buy Tickets &ndash; $75
-              </button>
-              <noscript>
-                <a href="https://www.eventbrite.ca/e/empty-bowls-kick-off-event-tickets-2002590653553"
-                   class="btn btn--primary btn--large" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a>
-              </noscript>
-            </div>
-            <p class="event-feature__note">Tickets are also available at our Oliver and Osoyoos offices.</p>
           </div>
-
-          <!-- ----------------------------------------------------------
-               ONLINE 50/50 (Raffle Nexus)
-               Tickets are sold on desertsun.rafflenexus.com - this card links there.
-               To remove after the draw: delete this <aside> and remove
-               " event-feature__grid--with-raffle" from the grid div above.
-               ---------------------------------------------------------- -->
-          <aside class="raffle-card" aria-labelledby="raffle-heading">
-            <span class="section-label">Online 50/50 Draw</span>
-            <h3 class="raffle-card__title" id="raffle-heading">Play our 50/50 online</h3>
-            <p class="raffle-card__desc">
-              Half the jackpot goes to one lucky winner, and half supports free
-              counselling and support programs in Oliver and Osoyoos.
-            </p>
-
-            <ul class="raffle-card__prices">
-              <li><span>1 ticket</span> <strong>$5</strong></li>
-              <li><span>5 tickets</span> <strong>$20</strong></li>
-              <li><span>20 tickets</span> <strong>$50</strong></li>
-            </ul>
-
-            <p class="raffle-card__draw">
-              Winner drawn live at the Empty Bowls Kick-Off on Saturday, November 14 at 9:00 pm.
-              Online sales close at 8:30 pm that night.
-            </p>
-
-            <a href="https://desertsun.rafflenexus.com/" class="btn btn--primary btn--large raffle-card__btn"
-               target="_blank" rel="noopener noreferrer">Buy 50/50 Tickets</a>
-
-            <p class="raffle-card__licence">
-              BC Gaming Event Licence #177224. Must be 19+ and located in BC to play.
-              Know your limit, play within it. Problem Gambling Help Line <span style="white-space: nowrap;">1-888-795-6111</span>.
-            </p>
-          </aside>
-
+          <dl class="winner-notice__ticket">
+            <div><dt>Winning ticket</dt><dd>#120345</dd></div>
+            <div><dt>Order number</dt><dd>#500056</dd></div>
+          </dl>
         </div>
+        <p class="winner-notice__licence">BC Gaming Event Licence #177224.</p>
       </div>
     </section>
 
@@ -690,29 +631,6 @@
         nav.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', false);
       });
-    });
-  </script>
-
-  <!-- ============================================================
-       EVENTBRITE - Empty Bowls ticket checkout (pop-up)
-       ============================================================ -->
-  <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
-  <script>
-    window.EBWidgets.createWidget({
-      widgetType: 'checkout',
-      eventId: '2002590653553',
-      themeSettings: {
-        brandColor: '#D4820A',
-        fontColor: '#1B3A5C',
-        background: '#FDF8F3'
-      },
-      modal: true,
-      modalTriggerElementId: 'eventbrite-widget-modal-trigger-2002590653553',
-      onOrderComplete: function () {
-        if (typeof gtag === 'function') {
-          gtag('event', 'purchase_eventbrite', { event_id: '2002590653553' });
-        }
-      }
     });
   </script>
 
