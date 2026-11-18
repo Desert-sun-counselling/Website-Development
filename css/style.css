@@ -2666,3 +2666,17 @@ p {
   .winner-notice__ticket div { flex: 1; padding: 10px 12px; }
   .winner-notice__ticket dd { font-size: 1.25rem; }
 }
+
+
+/* ----------------------------------------------------------------
+   EMPTY BOWLS & BASKETS - ONLINE FUNDRAISER (temporary, index.html)
+   Reuses the .event-feature styles above. Remove after Dec 31.
+   ---------------------------------------------------------------- */
+.ebb-campaign .event-feature__desc { margin-bottom: 14px; }
+.ebb-campaign__tagline {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 1.15rem;
+  margin: 18px 0 22px;
+}
